@@ -1,4 +1,18 @@
-<h1>About Us</h1>
-<p>
-	Learning how to code!
-</p>
+<% provide(:title, 'About Us') %>
+<!-- app/views/layouts/application.html.erb allows us to remove duplicative HTML structure below and only include interior contents
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sample App | <%= yield(:title) %></title>
+	</head>
+
+	<body>
+-->
+		<h1>About Us</h1>
+		<p>Find me in app/views/static_pages/about.html.erb
+		This is the about page for my rails sample application.
+		</p>
+<!--
+	</body>
+</html>
+-->

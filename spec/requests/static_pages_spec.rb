@@ -13,9 +13,9 @@ describe "StaticPages" do
     end
 =end
     
-    it "should have the h1 'Sample App'" do
+    it "should have the h1 'Home'" do
       visit '/static_pages/home'
-      page.should have_selector('h1', :text => 'Sample App')
+      page.should have_selector('h1', :text => 'Home')
     end
 
     it "should have the title 'Home'" do
@@ -56,9 +56,10 @@ describe "StaticPages" do
 =end
 
     it "should have the h1 'About Us'" do
-      visit '/static_pages/About'
+      visit '/static_pages/about'
       page.should have_selector('h1', :text => 'About Us')
    end
+
 
     it "should have the title 'About Us'" do
     visit '/static_pages/about'
