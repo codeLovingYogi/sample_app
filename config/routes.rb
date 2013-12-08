@@ -1,4 +1,5 @@
 SampleApp::Application.routes.draw do
+  resources :users
   #get "users/new"
 
   # Defining named routes, matches URI and routes to each of the actions in the StaticPages controller, can now go directly to /about path instead of /static_pages/about
