@@ -1,6 +1,7 @@
 SampleApp::Application.routes.draw do
   resources :users
   #get "users/new"
+  resources :sessions, only: [:new, :create, :destroy]
 
   # Defining named routes, matches URI and routes to each of the actions in the StaticPages controller, can now go directly to /about path instead of /static_pages/about
   root to: 'static_pages#home'
@@ -8,6 +9,8 @@ SampleApp::Application.routes.draw do
   match '/about', to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
   match '/signup', to: 'users#new'
+  match '/signin',  to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
 
   #get "static_pages/home"
 

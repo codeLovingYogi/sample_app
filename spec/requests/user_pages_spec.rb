@@ -41,6 +41,10 @@ describe "User pages" do
 
     it { should have_selector('h1',    text: 'Sign up') }
     it { should have_selector('title', text: full_title('Sign up')) }
+
+      describe "after saving the user" do
+          it { should have_link('Sign out') }
+      end
   end
 
   describe "profile page" do
@@ -50,6 +54,12 @@ describe "User pages" do
     it { should have_selector('h1',    text: user.name) }
     it { should have_selector('title', text: user.name) }
   end
+
+ # describe User do
+ #   it { should respond_to(:password_confirmation) }
+ #   it { should respond_to(:remember_token) }
+ #   it { should respond_to(:authenticate) }
+ # end
 
 end
 
